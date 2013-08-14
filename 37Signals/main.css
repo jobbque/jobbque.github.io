@@ -1,0 +1,153 @@
+#header {
+	width=100%;
+	margin-top: 29px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	font-size: 12px;
+}
+
+#happy-day {
+	padding-left: 50px;
+	color: #999999;
+}
+
+#header-links {
+	float: right;
+	margin-right: 5%;
+}
+
+#header-links a {
+	padding-right: 20px;
+	text-decoration: none;
+	color: #369;
+}
+
+#header-links a:hover {
+	text-decoration: none;
+	color: #6498CE;
+}
+
+#logo {
+	width: 164px;
+	margin: 0 auto;
+	padding-top: 34px;
+}
+
+.section-header {
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 10px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 58px;
+	line-height: 1.0em;
+	letter-spacing: -2px;
+	color: #232323;
+	text-align: center;
+	font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif;
+}
+
+.body-text {
+	width: 767px;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#webapps {
+	width: 666px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#basecamp-arrow {
+	position: absolute;
+	margin-left: 430px;
+	visibility: hidden;
+}
+
+#highrise-arrow {
+	position: absolute;
+	margin-left: 650px;
+	visibility: hidden;
+}
+
+#campfire-arrow {
+	position: absolute;
+	margin-left: 720px;
+	visibility: hidden;
+}
+
+#basecamp {
+	background: url('images/logo-bc.png') 50% 13% no-repeat, linear-gradient(to bottom, white, #EFEFEF);
+	float: left;
+	width: 180px;
+	height: 247px;
+	margin: 0 20px 0 20px;
+	border-radius: 5px;
+	border: #E8E8E8 solid 1px;
+}
+
+#highrise {
+	background: url('images/logo-hr.png') 50% 13% no-repeat, linear-gradient(to bottom, white, #EFEFEF);;
+	float: left;
+	width: 180px;
+	height: 247px;
+	margin: 0 20px 0 20px;
+	border-radius: 5px;
+	border: #E8E8E8 solid 1px;
+}
+
+#campfire {
+	background: url('images/logo-cf.png') 50% 13% no-repeat, linear-gradient(to bottom, white, #EFEFEF);;
+	float: left;
+	width: 180px;
+	height: 247px;
+	margin: 0 20px 0 20px;
+	border-radius: 5px;
+	border: #E8E8E8 solid 1px;
+}
+
+#webapps div div {
+	margin: 0 auto;
+}
+
+.heading {
+	position: relative;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	color: #369;
+	text-align: center;
+	padding-top: 120px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+.sub-heading {
+	position: relative;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	color: #CF0000;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.description {
+	position: relative;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;	color: #CF0000;
+	color: #222;
+	width: 160px;
+	padding-top: 14px;
+	font-size: 14px;
+	text-align: center;
+}
+
+hr { 
+	clear: both;
+	padding-top: 100px;
+	background: url('images/img-hr.png') 50% 50% no-repeat;
+	border: 0px;
+}
