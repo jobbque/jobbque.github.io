@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$("#basecamp").on("mouseenter", function() {
+	/*$("#basecamp").on("mouseenter", function() {
 		$(".section-header").text("Basecamp is the project management tool you wish you had on your last project.");
 		$(".body-text").text("Are you still managing projects with emails? Are you still using Excel for your to-do lists? It's time to upgrade to Basecamp. Manage projects and collaborate with your team and clients the modern way.");
 		$("#basecamp-arrow").css("visibility","visible");
@@ -17,25 +17,46 @@ $(document).ready(function() {
 		$(".body-text").text("Share ideas, discussions, concepts, images, code samples, videos, mockups, and documents in a real-time private chat room. It's game changing. We couldn't run our own business without Campfire.");
 		$("#campfire-arrow").css("visibility","visible");
 	});
+	*/
 
+	$("#basecamp-header, #highrise-header, #campfire-header").hide();
+
+	$("#basecamp-arrow, #highrise-arrow, #campfire-arrow").hide();
+
+	$("#basecamp").on("mouseenter", function() {
+		$("#main-header").hide();
+		$("#basecamp-arrow, #basecamp-header").show();
+	});
+
+	$("#highrise").on("mouseenter", function() {
+		$("#main-header").hide();
+		$("#highrise-arrow, #highrise-header").show();
+	});
+
+	$("#campfire").on("mouseenter", function() {
+		$("#main-header").hide();
+		$("#campfire-arrow, #campfire-header").show();
+	});
+
+/*
 	function replaceHeader () {
  		$(".section-header").text("Making collaboration productive and enjoyable for people every day.");
 		$(".body-text").text("Frustration-free web-based apps for collaboration, sharing information, and making decisions.");
 	}
-	
-	$("#basecamp").on("mouseleave", replaceHeader)
-				  .on("mouseleave", function() {
-		$("#basecamp-arrow").css("visibility","hidden");
+*/	
+	$("#basecamp").on("mouseleave", function() {
+		$("#basecamp-arrow, #basecamp-header").hide();
+		$("#main-header").show();
 	});
 
-	$("#highrise").on("mouseleave", replaceHeader)
-				  .on("mouseleave", function() {
-		$("#highrise-arrow").css("visibility","hidden");
+	$("#highrise").on("mouseleave", function() {
+		$("#highrise-arrow, #highrise-header").hide();
+		$("#main-header").show();
 	});
 
-	$("#campfire").on("mouseleave", replaceHeader)
-				  .on("mouseleave", function() {
-		$("#campfire-arrow").css("visibility","hidden");
+	$("#campfire").on("mouseleave", function() {
+		$("#campfire-arrow, #campfire-header").hide();
+		$("#main-header").show();
 	});
 
 });

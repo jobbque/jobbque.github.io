@@ -32,6 +32,10 @@
 	padding-top: 34px;
 }
 
+#main-header {
+	min-height: 200px;
+}
+
 .section-header {
 	width: 900px;
 	margin: 0 auto;
@@ -59,25 +63,21 @@
 #webapps {
 	width: 666px;
 	margin: 0 auto;
-	margin-top: 50px;
 }
 
 #basecamp-arrow {
 	position: absolute;
-	margin-left: 430px;
-	visibility: hidden;
+	padding-left: 140px;
 }
 
 #highrise-arrow {
 	position: absolute;
-	margin-left: 650px;
-	visibility: hidden;
+	padding-left: 140px;
 }
 
 #campfire-arrow {
 	position: absolute;
-	margin-left: 720px;
-	visibility: hidden;
+	padding-left: 190px;
 }
 
 #basecamp {
@@ -85,7 +85,7 @@
 	float: left;
 	width: 180px;
 	height: 247px;
-	margin: 0 20px 0 20px;
+	margin: 0px 20px 0 20px;
 	border-radius: 5px;
 	border: #E8E8E8 solid 1px;
 }
@@ -108,6 +108,7 @@
 	margin: 0 20px 0 20px;
 	border-radius: 5px;
 	border: #E8E8E8 solid 1px;
+	max-width: 300px;
 }
 
 #webapps div div {
