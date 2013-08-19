@@ -50,6 +50,11 @@
 	font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif;
 }
 
+.app-name {
+	color: #30659B;
+	text-decoration: underline;
+}
+
 .body-text {
 	width: 767px;
 	margin: 0 auto;
@@ -67,17 +72,17 @@
 
 #basecamp-arrow {
 	position: absolute;
-	padding-left: 140px;
+	padding-left: 210px;
 }
 
 #highrise-arrow {
 	position: absolute;
-	padding-left: 140px;
+	padding-left: 430px;
 }
 
 #campfire-arrow {
 	position: absolute;
-	padding-left: 190px;
+	padding-left: 490px;
 }
 
 #basecamp {
