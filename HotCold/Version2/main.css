@@ -1,0 +1,20 @@
+/*#header {
+	width=100%;
+	margin-top: 29px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	font-size: 12px;
+}
+
+#happy-day {
+	padding-left: 50px;
+	color: #999999;
+}
+*/
+
+#yourNumber {
+	margin: 0 auto;
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	border-radius: 10px;
+}
