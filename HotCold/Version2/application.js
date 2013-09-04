@@ -2,6 +2,7 @@ var theRandomNumber = Math.floor(Math.random()*101);
 
 $(document).ready(function() {
   // Handler for .ready() called.
+  $("#upArrow, #downArrow, #correct").hide();
 });
 
 function getStatus (difference) {
@@ -17,8 +18,10 @@ function getStatus (difference) {
 	return status;
 };
 
-function highLow (theirNumber) {
-	if (theirNumber > theRandomNumber) {
+/*function highLow (theirNumber) {
+	if (theirNumber > 100) {
+		highLowStatus = "Please pick from 1-100 only."
+	} else if (theirNumber > theRandomNumber) {
 		highLowStatus = "Too High";
 	} else if (theirNumber < theRandomNumber) {
 		highLowStatus = "Too Low";
@@ -26,7 +29,20 @@ function highLow (theirNumber) {
 		highLowStatus = "You Got It!"
 	}
 	return highLowStatus;
-}
+}*/
+
+function highLow (theirNumber) {
+
+	$("#upArrow, #downArrow, #correct").hide();
+
+	if (theirNumber > theRandomNumber) {
+		$("#downArrow").show();
+	} else if (theirNumber < theRandomNumber) {
+		$("#upArrow").show();
+	} else {
+		$("#correct").show();
+	} 
+};
 
 function testNumber() {
 	
@@ -35,8 +51,9 @@ function testNumber() {
 	var status = "cold";
 	var highLowStatus = "Too High";
 
+	highLow(theirNumber);
 	//document.getElementById("randNumber").innerHTML= "The Random Number is: " + theRandomNumber;
 	//document.getElementById("aNumber").innerHTML= "Their Number is: " + theirNumber;
 	//document.getElementById("numberDifference").innerHTML= "Difference: " + difference;
-	document.getElementById("currentStatus").innerHTML= highLow(theirNumber);	
+	//document.getElementById("currentStatus").innerHTML= highLow(theirNumber);	
 };
