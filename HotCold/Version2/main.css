@@ -11,22 +11,27 @@
 }
 */
 
+#instructions {
+	font-family: Helvetica;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 200px;
+}
+
 #yourNumber {
 	margin: 0 auto;
 	width: 90px;
-	border-radius: 10px;
-	padding-top: 200px;
 }
 
 #theNumber {
 	width: 46px;
 	font-family: Helvetica;
 	font-size: 40px;
-	margin-left: 20px; 
+	margin-left: 25px; 
 }
 
 #button {
-	width: 90px;
+	width: 100px;
 	margin-top: 15px;
 }
 
@@ -37,7 +42,7 @@
 }
 
 #arrows {
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 #upArrow {
