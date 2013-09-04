@@ -13,8 +13,25 @@
 
 #yourNumber {
 	margin: 0 auto;
-	height: 200px;
-	width: 200px;
-	background-color: red;
+	width: 90px;
 	border-radius: 10px;
+	padding-top: 200px;
+}
+
+#theNumber {
+	width: 46px;
+	font-family: Helvetica;
+	font-size: 40px;
+	margin-left: 20px; 
+}
+
+#button {
+	width: 90px;
+	margin-top: 10px;
+}
+
+#currentStatus {
+	font-family: Helvetica;
+	font-size: 40px;
+	text-align: center;
 }
