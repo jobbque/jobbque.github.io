@@ -24,10 +24,10 @@
 }
 
 #theNumber {
-	width: 46px;
+	width: 68px;
 	font-family: Helvetica;
 	font-size: 40px;
-	margin-left: 25px; 
+	margin-left: 15px; 
 }
 
 #button {
@@ -51,4 +51,21 @@
 
 #downArrow {
 	position: absolute;
+}
+
+#correct {
+	position: absolute;
+}
+
+#invalidEntry {
+	font-family: Helvetica;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+#numbersGuessed {
+	text-align: center;
+	font-family: Helvetica;
+	padding-top: 95px;
 }
