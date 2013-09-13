@@ -11,6 +11,11 @@
 }
 */
 
+#everything {
+	margin: 0 auto;
+	width: 1px;
+}
+
 #newItem {
 	font-family: Helvetica;
 	font-size: 25px;
@@ -38,6 +43,7 @@
 	width: 377px;
 	height: 513px;
 	border-radius: 5px;
+
 }
 
 #controls {
