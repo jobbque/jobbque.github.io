@@ -9,17 +9,38 @@ $(document).ready(function() {
 	});
 });
 
+
+function createShoppingList () {
+	for (var i=0; i < shoppingList.length; i++) {
+		if (typeof shoppingList[i] != 'undefined') {
+			$("#shoppingList").append("<input type='checkbox' id='checkbox"+i+"'><span id='shoppingListItem"+i+"'>"+shoppingList[i]+"</span> <br>");
+		}
+	}
+}
+
+
+//Takes an item as imput from the form, adds it to the array
+//sends array contents to screen.
+
+function addItemToList () {
+
+	$("#newItem").text(function(){
+    	this.select();
+	});
+
+	var Item = document.getElementById('newItem').value;
+
+	if (Item.length > 0) {
+		shoppingList[itemNumber] = Item;
+		itemNumber++;
+	}
+
+	manageShoppingList ();
+}
+
 function manageShoppingList () {
 
 	$("#shoppingList").empty();
-
-	function createShoppingList () {
-		for (var i=0; i < shoppingList.length; i++) {
-			if (typeof shoppingList[i] != 'undefined') {
-				$("#shoppingList").append("<input type='checkbox' id='checkbox"+i+"'><span id='shoppingListItem"+i+"'>"+shoppingList[i]+"</span> <br>");
-			}
-		}
-	}
 
 	createShoppingList ();
 		
@@ -49,18 +70,4 @@ function manageShoppingList () {
 	});
 }
 
-//Takes and item as imput from the form, adds it to the array
-//sends array contents to screen.
 
-function addItemToList () {
-
-	$("#newItem").text(function(){
-    	this.select();
-	});
-
-	var Item = document.getElementById('newItem').value;
-	shoppingList[itemNumber] = Item;
-	itemNumber++;
-
-	manageShoppingList ();
-}
