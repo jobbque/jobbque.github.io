@@ -16,6 +16,12 @@
 	width: 1px;
 }
 
+#duplicateEntry {
+	margin-top: 10px;
+	margin-left: 45px;
+	position: fixed;
+}
+
 #newItem {
 	font-family: Helvetica;
 	font-size: 25px;
@@ -42,8 +48,8 @@
 	background-image: url('images/paperBackground.png');
 	width: 377px;
 	height: 513px;
+	overflow: auto;
 	border-radius: 5px;
-
 }
 
 #controls {

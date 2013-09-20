@@ -8,6 +8,7 @@ $(document).ready(function() {
         	$("#button").click();
     	}
 	});
+	$("#duplicateEntry").hide();
 });
 
 //Takes an item as imput from the form, adds it to the array
@@ -15,15 +16,24 @@ $(document).ready(function() {
 
 function addItemToList () {
 
+	$( "#duplicateEntry" ).slideUp( function() {
+    	// Animation complete.
+    });
+
 	$("#newItem").text(function(){
     	this.select();
 	});
 
 	var Item = document.getElementById('newItem').value;
 
-	if (Item.length > 0) {
+	if (Item.length > 0 && isAlreadyListed(Item) != true) {
 		shoppingList[itemNumber] = Item;
 		itemNumber++;
+	} else {
+		//$("#duplicateEntry").show();
+    	$( "#duplicateEntry" ).slideDown( function() {
+    	// Animation complete.
+    	});
 	}
 
 	manageShoppingList ();
@@ -78,6 +88,14 @@ function createShoppingList () {
 function isChecked (someListItem){
 	for (var i=0; i < checkedList.length; i++) {
 		if (someListItem === checkedList[i]) {
+			return true;
+		} 
+	}
+}
+
+function isAlreadyListed(item) {
+	for (var i=0; i < shoppingList.length; i++) {
+		if (item === shoppingList[i]) {
 			return true;
 		} 
 	}
