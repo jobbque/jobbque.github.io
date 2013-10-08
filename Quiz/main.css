@@ -5,23 +5,67 @@
 	font-size: 12px;
 }*/
 
+#question div {
+	font-family: Helvetica;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 #square {
 	height: 30px;
 	width: 100px;
 	border-radius: 5px;
-	background-color: red;
+	text-align: center;
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.37, rgb(219,219,219)),
+	color-stop(0.69, rgb(217,218,235)),
+	color-stop(0.85, rgb(184,185,194))
+	)
+}
+
+#submitOne {
+	padding-top: 5px;
 }
 
 #square2 {
 	height: 30px;
 	width: 100px;
 	border-radius: 5px;
-	background-color: red;
+	text-align: center;
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.37, rgb(219,219,219)),
+	color-stop(0.69, rgb(217,218,235)),
+	color-stop(0.85, rgb(184,185,194))
+	)
+}
+
+#submitTwo {
+	padding-top: 5px;
 }
 
 #square3 {
 	height: 30px;
 	width: 100px;
 	border-radius: 5px;
-	background-color: red;
+	text-align: center;
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.37, rgb(219,219,219)),
+	color-stop(0.69, rgb(217,218,235)),
+	color-stop(0.85, rgb(184,185,194))
+	)
 }
+
+#submitThree {
+	padding-top: 5px;
+}
+
+

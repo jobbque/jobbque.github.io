@@ -2,14 +2,17 @@ var question1Answer = "";
 var question2Answer = "";
 var question3Answer = "";
 
-var numberOfQuestions = 3;
+var numberOfQuestions = 0;
 var numberOfCorrectAnswers = 0;
+var TotalNumberOfQuestions = 3;
+var questionNumber = 1;
 
 $(document).ready(function() {
   // Handler for .ready() called.
 
   //http://jsfiddle.net/s5EE3/2/
 
+    printQuestionTotal();
     printQuestion(question1);
     
     $("#square2").hide();
@@ -17,32 +20,14 @@ $(document).ready(function() {
 
     $( "#square" ).click(function() {
 
-      /*$("#square").animate({
-        left:'250px',
-        height:'+=150px',
-        width:'+=150px'
-      });*/
+      checkQuestionOne();
+      numberOfQuestions++;
+      printCurrentScore();
 
-      if ($('#buttonA').is(':checked')) {
-        question1Answer = question1.answer1;
-      } else if ($('#buttonB').is(':checked')) {
-        question1Answer = question1.answer2;
-      } else if ($('#buttonC').is(':checked')) {
-        question1Answer = question1.answer3;
-      } else if ($('#buttonD').is(':checked')) {
-        question1Answer = question1.answer4;
-      }
-
-      if (question1Answer === question1.correctAnswer) {
-        numberOfCorrectAnswers++;
-      }
-
-      //$("#questionOneAnswer").append(question1Answer);
-      //$("#numberCorrect").append(numberOfCorrectAnswers);
-
-      $("#square").slideDown().fadeOut();
+      $("#square").hide();
       $("#question").empty();
 
+      printQuestionTotal();
       printQuestion(question2);    
 
       $("#square2").show();
@@ -53,27 +38,14 @@ $(document).ready(function() {
 
     $( "#square2" ).click(function() {
 
-     if ($('#buttonA').is(':checked')) {
-        question2Answer = question2.answer1;
-      } else if ($('#buttonB').is(':checked')) {
-        question2Answer = question2.answer2;
-      } else if ($('#buttonC').is(':checked')) {
-        question2Answer = question2.answer3;
-      } else if ($('#buttonD').is(':checked')) {
-        question2Answer = question2.answer4;
-      }
-
-      if (question2Answer === question2.correctAnswer) {
-        numberOfCorrectAnswers++;
-      }
-
-      //$("#questionTwoAnswer").append(question2Answer);
-      //$("#numberCorrect").append(numberOfCorrectAnswers);
-
+      checkQuestionTwo();
+      numberOfQuestions++;
+      printCurrentScore();
 
       $("#square2").remove();
       $("#question").empty();
 
+      printQuestionTotal();
       printQuestion(question3);
 
       $("#square3").show();
@@ -82,28 +54,16 @@ $(document).ready(function() {
 
     $( "#square3" ).click(function() {
 
-     if ($('#buttonA').is(':checked')) {
-        question3Answer = question3.answer1;
-      } else if ($('#buttonB').is(':checked')) {
-        question3Answer = question3.answer2;
-      } else if ($('#buttonC').is(':checked')) {
-        question3Answer = question3.answer3;
-      } else if ($('#buttonD').is(':checked')) {
-        question3Answer = question3.answer4;
-      }
-
-      if (question3Answer === question3.correctAnswer) {
-        numberOfCorrectAnswers++;
-      }
-
-      //$("#questionThreeAnswer").append(question3Answer);
+      checkQuestionThree();
+      numberOfQuestions++;
+      printCurrentScore();
 
       $("#numberCorrect").append("Number of Correct Answers: "+numberOfCorrectAnswers);
 
-
       $("#square3").remove();
       $("#question").empty();
-
+      $("#currentScore").hide();
+      $("#questionTotal").hide();
     });
 
 });
@@ -126,7 +86,75 @@ function printQuestion (question) {
   //$("#question").append("<input id='clickMe' type='submit' value='Submit'>");
 }
 
-question1 = new Question("What is the highest grossing film (world-wide) of all time?", "ET", "The Dark Knight", "Avatar", "Titanc", "Avatar");
+function printCurrentScore() {
+  $("#currentScore").empty();
+  $("#currentScore").append("<div>You have answered "+numberOfCorrectAnswers+" out of "+numberOfQuestions+" correctly.</div>");
+}
+
+function printQuestionTotal() {
+
+  $("#questionTotal").empty();
+  $("#questionTotal").append("<div>Question "+questionNumber+" out of "+TotalNumberOfQuestions+"</div>");
+
+  questionNumber++;
+}
+
+function mustMakeSelectionAlert()
+{
+alert("Please select an answer.");
+}
+
+function checkQuestionOne() {
+      if ($('#buttonA').is(':checked')) {
+        question1Answer = question1.answer1;
+      } else if ($('#buttonB').is(':checked')) {
+        question1Answer = question1.answer2;
+      } else if ($('#buttonC').is(':checked')) {
+        question1Answer = question1.answer3;
+      } else if ($('#buttonD').is(':checked')) {
+        question1Answer = question1.answer4;
+      } else {
+        mustMakeSelectionAlert();
+      }
+
+      if (question1Answer === question1.correctAnswer) {
+        numberOfCorrectAnswers++;
+      }
+}
+
+function checkQuestionTwo() {
+  if ($('#buttonA').is(':checked')) {
+        question2Answer = question2.answer1;
+      } else if ($('#buttonB').is(':checked')) {
+        question2Answer = question2.answer2;
+      } else if ($('#buttonC').is(':checked')) {
+        question2Answer = question2.answer3;
+      } else if ($('#buttonD').is(':checked')) {
+        question2Answer = question2.answer4;
+      }
+
+      if (question2Answer === question2.correctAnswer) {
+        numberOfCorrectAnswers++;
+      }
+}
+
+function checkQuestionThree() {
+  if ($('#buttonA').is(':checked')) {
+        question3Answer = question3.answer1;
+      } else if ($('#buttonB').is(':checked')) {
+        question3Answer = question3.answer2;
+      } else if ($('#buttonC').is(':checked')) {
+        question3Answer = question3.answer3;
+      } else if ($('#buttonD').is(':checked')) {
+        question3Answer = question3.answer4;
+      }
+
+      if (question3Answer === question3.correctAnswer) {
+        numberOfCorrectAnswers++;
+      }
+}
+
+question1 = new Question("What is the highest grossing film (world-wide) of all time?", "ET", "The Dark Knight", "Avatar", "Titanic", "Avatar");
 question2 = new Question("What Brad Pitt's highest grossing film?", "Ocean's 11", "Ocean's 12", "World War Z", "Mr. & Mrs. Smith", "World War Z");
 question3 = new Question("Which one of these films did not gross over 1 billion dollars?", "The Lion King", "Skyfall", "Toy Story 3", "Marvel's The Avengers", "The Lion King");
 
